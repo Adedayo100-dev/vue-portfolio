@@ -59,7 +59,7 @@ const routes = [
     }
   },
   {
-    path: '*',
+    path: '/:pathMatch(.*)*',
     name: '404',
     component: ErrorPage,
     meta: {
