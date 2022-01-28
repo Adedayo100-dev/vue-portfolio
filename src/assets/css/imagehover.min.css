@@ -1,0 +1,54 @@
+
+ 
+.tile-border {
+    border-color: rgba(240, 235, 224, 0.2);
+    border-width: 1px;
+    inset: 0px;
+    position: absolute;
+}
+.tile-border .border-vertical-grid-left, .tile-border .border-vertical-grid-right {
+    background: url("../images/border-vertical-grid.png") center top repeat-y;
+    bottom: 40px;
+    position: absolute;
+    top: 30px;
+    width: 20px;
+}
+.tile-border .border-vertical-grid-left {
+    left: -10px;
+}
+.tile-border .border-vertical-grid-right {
+    right: -10px;
+}
+.battle-of-gallipoli-tile .border-plus-graphic-tr {
+    right: -16px;
+    top: -11px;
+}
+.tile-border .border-plus-graphic-tr {
+    position: absolute;
+    right: -6px;
+    top: -1px;
+}
+.tile .plus-graphic {
+    background-color: rgba(240, 235, 224, 0.35);
+    height: 1px;
+    position: relative;
+    width: 10px;
+}
+.battle-of-gallipoli-tile .border-plus-graphic-bl {
+    bottom: -11px;
+    left: -15px;
+}
+.tile-border .border-plus-graphic-bl {
+    bottom: -1px;
+    left: -5px;
+    position: absolute;
+}
+.tile .plus-graphic::before {
+    background-color: rgba(240, 235, 224, 0.35);
+    content: "";
+    height: 10px;
+    left: 4px;
+    position: absolute;
+    top: -5px;
+    width: 1px;
+}
