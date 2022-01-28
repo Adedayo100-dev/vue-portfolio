@@ -1,0 +1,69 @@
+<template>
+    <div>
+        <div class="sidenav" v-bind:class="{'nav-open': isActive}" id="sidenav">
+        <!-- 100vh close, links, socials -->
+        <div class="sidenav-body">
+            <div>
+                <ul>
+                    <li class="nav-list">
+                        <router-link to="/">Home</router-link>
+                    </li>
+                    <li class="nav-list">
+                        <router-link to="/about">About</router-link>
+                    </li>
+                    <li class="nav-list">
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <!-- <li class="w-100 d-flex">
+                        <div class="form-check form-switch m-auto">
+                            <input class="form-check-input" type="checkbox" id="themeCheck" checked>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="contact">
+                <div class="contact-me-title">
+                    <span>
+                        <a href="contact.html">Get in Touch</a>
+                    </span>
+                </div>
+
+                <ul class="socialsgroup">
+                    <li class="socials-list">
+                        <a href="https://github.com/Adedayo100-ux" title="Github" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+                        </a>
+                    </li>
+                    <li class="socials-list">
+                        <a href="https://twitter.com/" title="Twitter" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21 17" role="img"><path d="M18.862 4.84c0-.19-.01-.369-.018-.557A8.445 8.445 0 0 0 21 2.1a8.609 8.609 0 0 1-2.475.638A4.188 4.188 0 0 0 20.419.41a8.522 8.522 0 0 1-2.734.988A4.39 4.39 0 0 0 14.543 0a4.236 4.236 0 0 0-4.312 4.243c0 .335.035.661.113.979C6.76 5.002 3.584 3.245 1.462.59a4.295 4.295 0 0 0-.587 2.174c0 1.51.763 2.851 1.921 3.636A4.313 4.313 0 0 1 .84 5.835v.059a4.379 4.379 0 0 0 3.463 4.282 4.34 4.34 0 0 1-1.134.146 4.405 4.405 0 0 1-.814-.09 4.324 4.324 0 0 0 4.025 3.032A8.619 8.619 0 0 1 0 15.038 12.048 12.048 0 0 0 6.606 17c7.92 0 12.256-6.514 12.256-12.16" fill="currentColor" fill-rule="evenodd"></path></svg>
+                        </a>
+                    </li>
+                    <li class="socials-list">
+                        <a href="https://www.instagram.com/taiwo_adedayo_/" title="Instagram" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 21" role="img"><g fill="currentColor" fill-rule="evenodd"><path d="M18.225 15.204c0 2.17-1.68 3.932-3.744 3.932H5.519c-2.064 0-3.744-1.762-3.744-3.932v-9.41c0-2.168 1.68-3.93 3.744-3.93h8.962c2.064 0 3.744 1.762 3.744 3.93v9.41zM14.481 0H5.519C2.475 0 0 2.599 0 5.794v9.41C0 18.401 2.475 21 5.52 21h8.96c3.045 0 5.52-2.599 5.52-5.796v-9.41C20 2.599 17.525 0 14.48 0z"></path><path d="M10 14.931a3.936 3.936 0 0 1-3.933-3.932A3.938 3.938 0 0 1 10 7.064a3.937 3.937 0 0 1 3.933 3.935A3.936 3.936 0 0 1 10 14.93M10 5c-3.308 0-6 2.69-6 5.999A6.008 6.008 0 0 0 10 17c3.308 0 6-2.694 6-6.001A6.006 6.006 0 0 0 10 5M14.501 3c-.394 0-.783.158-1.06.438-.278.28-.441.666-.441 1.06 0 .395.163.782.44 1.062.278.277.667.44 1.061.44.395 0 .781-.163 1.059-.44.28-.28.44-.667.44-1.061A1.498 1.498 0 0 0 14.501 3"></path></g></svg>
+                        </a>
+                    </li>
+                    <li class="socials-list">
+                        <a href="https://linkedin.com/mwlite/in/taiwo-adedayo-7951051b3" title="Whatsapp" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 17 16" role="img"><path d="M.215 16h3.643V5.204H.215V16zM2.06 0C.814 0 0 .806 0 1.865 0 2.903.792 3.73 2.013 3.73h.025c1.27 0 2.06-.827 2.06-1.865C4.075.805 3.308 0 2.06 0zM17 9.808V16h-3.645v-5.777c0-1.45-.526-2.44-1.847-2.44-1.007 0-1.603.667-1.87 1.313-.095.23-.12.553-.12.874V16H5.875s.05-9.782 0-10.796h3.645v1.53c-.007.012-.018.023-.025.036h.025v-.037c.485-.734 1.348-1.782 3.284-1.782C15.2 4.951 17 6.493 17 9.808z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                        </a>
+                    </li>
+                    <li class="socials-list">
+                        <a href="https://wa.me/+2348026244041" title="Facebook" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 11 23" role="img"><path d="M6.271 23V11.488h3.892l.619-3.818h-4.51V5.756c0-1 .334-1.947 1.796-1.947H11V0H6.843C3.348 0 2.396 2.251 2.396 5.36v2.31H0v3.818h2.396V23H6.27z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="text-align-center">
+                    <small style="color: rgb(170, 170, 170, .75);">Made with love in Ontario, <span class="nig-word"> Canada,</span> by <a href="https://www.instagram.com/">_taiwo_adedayo_</a></small>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</template>
+
+<script>
+
+</script>
